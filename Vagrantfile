@@ -25,5 +25,5 @@ Vagrant.configure "2" do |config|
     end
   end
   config.vm.provision "shell", inline: $script
- config.vm.synced_folder ".", "/vagrant", type: "nfs"   # For MacOSx uncomment this line
+#  config.vm.synced_folder ".", "/vagrant", type: "nfs"   # For MacOSx uncomment this line
 end 
