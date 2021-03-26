@@ -1,0 +1,14 @@
+version: "3"
+
+volumes:
+  jenkins_home:
+
+services:
+  jenkins:
+    image: jenkins/jenkins
+    network_mode: host
+    environment:
+      JAVA_OPTS: "-Djava.awt.headless=true"
+    volumes:
+      - jenkins_home:/var/jenkins_home 
+    restart: unless-stopped
