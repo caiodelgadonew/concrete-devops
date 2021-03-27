@@ -1,8 +1,5 @@
 version: "3"
 
-volumes:
-  jenkins_home:
-
 services:
   jenkins:
     image: jenkins/jenkins
@@ -10,5 +7,5 @@ services:
     environment:
       JAVA_OPTS: "-Djava.awt.headless=true"
     volumes:
-      - jenkins_home:/var/jenkins_home 
+      - /opt/jenkins_home:/var/jenkins_home 
     restart: unless-stopped

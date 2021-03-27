@@ -20,6 +20,9 @@ Vagrant.configure "2" do |config|
       if "#{name}" == "k8s"
         machine.vm.provision"shell", path: "scripts/k8s.sh"
       end
+      if "#{name}" == "ci"
+        machine.vm.provision"shell", path: "scripts/ci.sh"
+      end
     end
   end
 end 
